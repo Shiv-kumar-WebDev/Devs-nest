@@ -1,0 +1,7 @@
+.flex {
+  display: flex;
+}
+body > div {
+  width: 70%;
+  margin: auto;
+}
