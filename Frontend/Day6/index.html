@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Write a JavaScript function to check whether an `input` is an array or not
+
+      function isArray() {
+        // let input = "'w3resource'";
+        let input = [1, 2, 4, 0];
+        console.log(Array.isArray(input));
+      }
+      isArray();
+
+      //   Write a JavaScript function to clone an array
+
+      function cloneArray() {
+        let numbers = [1, 2, 4, 0];
+        // let numbers = [1, 2, [4, 0]];
+        let numbersCopy = [];
+
+        for (i = 0; i < numbers.length; i++) {
+          numbersCopy[i] = numbers[i];
+        }
+        console.log(numbersCopy);
+      }
+      cloneArray();
+    </script>
+  </body>
+</html>
