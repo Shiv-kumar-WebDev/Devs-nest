@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.outerCircle {
+  width: 500px;
+  height: 500px;
+  background: red;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.innerCircle {
+  width: 380px;
+  height: 380px;
+  background: white;
+  border-radius: 50%;
+  /* display: grid;
+  place-items: center; */
+  position: relative;
+}
+.line {
+  position: absolute;
+  width: 4px;
+  height: 45%;
+  background: black;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 0);
+}
+.line2 {
+  transform-origin: top;
+  transform: translate(-50%, 0) rotateZ(30deg);
+}
+.line3 {
+  transform-origin: top;
+  transform: translate(-50%, 0) rotateZ(-45deg);
+}
