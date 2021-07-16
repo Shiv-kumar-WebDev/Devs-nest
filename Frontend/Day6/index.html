@@ -8,7 +8,7 @@
   </head>
   <body>
     <script>
-      // Write a JavaScript function to check whether an `input` is an array or not
+      // 1) Write a JavaScript function to check whether an `input` is an array or not
 
       function isArray() {
         // let input = "'w3resource'";
@@ -17,19 +17,39 @@
       }
       isArray();
 
-      //   Write a JavaScript function to clone an array
+      // 2)  Write a JavaScript function to clone an array
 
       function cloneArray() {
-        let numbers = [1, 2, 4, 0];
-        // let numbers = [1, 2, [4, 0]];
-        let numbersCopy = [];
+        let array = [1, 2, 4, 0];
+        // let array = [1, 2, [4, 0]];
+        let arrayCopy = [];
 
-        for (i = 0; i < numbers.length; i++) {
-          numbersCopy[i] = numbers[i];
+        for (i = 0; i < array.length; i++) {
+          arrayCopy[i] = array[i];
         }
-        console.log(numbersCopy);
+        console.log(arrayCopy);
       }
       cloneArray();
+
+      // 3)  Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array.
+
+      function first(n) {
+        console.log(n[0]);
+      }
+      //   first([], 3);
+      first([[7, 9, 0, -2], 3]);
+
+      //  4) Write a simple JavaScript program to join all elements of the following array into a string.
+
+      let myColor = ["Red", "Green", "White", "Black"];
+      let text1 = myColor.toString();
+      let text2 = myColor.join(" + ");
+      console.log(text1);
+      console.log(text2);
+
+      // 5)  Write a JavaScript program to find the most frequent item of an array
+
+      var arr1 = [3, "a", "a", "a", 2, 3, "a", 3, "a", 2, 4, 9, 3];
     </script>
   </body>
 </html>
