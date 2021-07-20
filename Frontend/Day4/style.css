@@ -34,11 +34,19 @@ body {
   top: 50%;
   transform: translate(-50%, 0);
 }
-.line2 {
+.hour {
+  width: 10px;
+  height: 30%;
+}
+.minute {
+  width: 5px;
+  height: 45%;
   transform-origin: top;
   transform: translate(-50%, 0) rotateZ(30deg);
 }
-.line3 {
+.second {
+  width: 2px;
+  height: 45%;
   transform-origin: top;
   transform: translate(-50%, 0) rotateZ(-45deg);
 }
