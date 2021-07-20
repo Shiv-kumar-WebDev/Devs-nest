@@ -38,25 +38,25 @@
         // console.log(num1);
         // console.log(typeof num2);
         // console.log(num2);
-        result.innerHTML = "Result : " + (parseInt(num1) + parseInt(num2));
+        result.innerHTML = "Result : " + (parseFloat(num1) + parseFloat(num2));
       });
       sub.addEventListener("click", function (e) {
         e.preventDefault();
         const num1 = document.querySelector("#num1").value;
         const num2 = document.querySelector("#num2").value;
-        result.innerHTML = "Result : " + (parseInt(num1) - parseInt(num2));
+        result.innerHTML = "Result : " + (parseFloat(num1) - parseFloat(num2));
       });
       mul.addEventListener("click", function (e) {
         e.preventDefault();
         const num1 = document.querySelector("#num1").value;
         const num2 = document.querySelector("#num2").value;
-        result.innerHTML = "Result : " + parseInt(num1) * parseInt(num2);
+        result.innerHTML = "Result : " + parseFloat(num1) * parseFloat(num2);
       });
       div.addEventListener("click", function (e) {
         e.preventDefault();
         const num1 = document.querySelector("#num1").value;
         const num2 = document.querySelector("#num2").value;
-        result.innerHTML = "Result : " + parseInt(num1) / parseInt(num2);
+        result.innerHTML = "Result : " + parseFloat(num1) / parseFloat(num2);
       });
     </script>
   </body>
