@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+        height: 100vh;
+      }
+      .top {
+        display: flex;
+        padding: 2em;
+        justify-content: space-around;
+      }
+      .container {
+        margin: auto;
+        width: 80%;
+        height: 70%;
+        background: red;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 5px;
+        padding: 5px;
+      }
+      .container div {
+        width: 100%;
+        height: 100%;
+        background: tomato;
+      }
+      .container div:hover {
+        opacity: 1.5;
+      }
+      .yellow {
+        background: yellow !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <h1>Booked seats : <span class="bookedSeats"></span></h1>
+      <h1>Seats remaining : <span class="seatsRemaining"></span></h1>
+    </div>
+    <div class="container"></div>
+    <script>
+      const container = document.querySelector(".container");
+      let bookedSeats = document.querySelector(".top h1 .bookedSeats");
+      let seatsRemaining = document.querySelector(".top h1 .seatsRemaining");
+      bookedSeats.innerHTML = 0;
+      seatsRemaining.innerHTML = 48;
+      for (let i = 1; i <= 8 * 6; i++) {
+        const div = document.createElement("div");
+        container.appendChild(div);
+        div.addEventListener("click", () => {
+          div.classList.toggle("yellow");
+        });
+      }
+      const boxes = document.querySelectorAll(".container div");
+      boxes.forEach((box) => {
+        box.addEventListener("click", (item) => {
+          //   bookedSeats.innerHTML = item;
+          //   console.log(item);
+          bookedSeats.innerHTML = parseInt(bookedSeats.innerHTML) + 1;
+          seatsRemaining.innerHTML = parseInt(seatsRemaining.innerHTML) - 1;
+        });
+      });
+    </script>
+  </body>
+</html>
