@@ -65,10 +65,13 @@
       const boxes = document.querySelectorAll(".container div");
       boxes.forEach((box) => {
         box.addEventListener("click", (item) => {
-          //   bookedSeats.innerHTML = item;
-          //   console.log(item);
-          bookedSeats.innerHTML = parseInt(bookedSeats.innerHTML) + 1;
-          seatsRemaining.innerHTML = parseInt(seatsRemaining.innerHTML) - 1;
+          if (box.classList == "yellow") {
+            bookedSeats.innerHTML = parseInt(bookedSeats.innerHTML) + 1;
+            seatsRemaining.innerHTML = parseInt(seatsRemaining.innerHTML) - 1;
+          } else {
+            bookedSeats.innerHTML = parseInt(bookedSeats.innerHTML) - 1;
+            seatsRemaining.innerHTML = parseInt(seatsRemaining.innerHTML) + 1;
+          }
         });
       });
     </script>
