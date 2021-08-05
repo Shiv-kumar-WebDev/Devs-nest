@@ -13,28 +13,38 @@
         background: lightgray;
         padding: 5px;
       }
+      .green {
+        color: green;
+      }
+      .red {
+        color: red;
+      }
     </style>
   </head>
   <body>
     <h1>javaScript MCQs</h1>
 
     <!-- Q1 -->
-    <!-- ghfghfhg -->
     <h2>1) Which type of JavaScript language is ___</h2>
     <br />
     <label for="q1_1">
-      <input type="radio" name="q1" id="q1_1" />a. Object-Oriented </label
+      <input type="radio" name="q1" id="q1_1" onclick="question()" />a.
+      Object-Oriented </label
     ><br />
     <label for="q1_2"
-      ><input type="radio" name="q1" id="q1_2" />b. Object-Based </label
+      ><input type="radio" name="q1" id="q1_2" onclick="question()" />b.
+      Object-Based </label
     ><br />
     <label for="q1_3"
-      ><input type="radio" name="q1" id="q1_3" />c. Assembly-language</label
+      ><input type="radio" name="q1" id="q1_3" onclick="question()" />c.
+      Assembly-language</label
     >
     <br />
     <label for="q1_4"
-      ><input type="radio" name="q1" id="q1_4" />d. High-level <br />
+      ><input type="radio" name="q1" id="q1_4" onclick="question()" />d.
+      High-level <br />
     </label>
+    <span></span>
     <!-- Ans. b -->
 
     <!-- Q2 -->
@@ -128,5 +138,19 @@
       <br />
     </label>
     <!-- Ans. d -->
+    <script>
+      function question() {
+        var ans = document.querySelector("#q1_2");
+        if (ans.checked === true) {
+          var result = document.querySelector("span");
+          result.classList = "green";
+          result.innerHTML = "right!";
+        } else {
+          var result = document.querySelector("span");
+          result.classList = "red";
+          result.innerHTML = "wrong!";
+        }
+      }
+    </script>
   </body>
 </html>
